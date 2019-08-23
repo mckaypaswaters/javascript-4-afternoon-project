@@ -67,7 +67,7 @@ let who = {
   location: 'Belize'
 }
 
-//Code Here
+let whoSaysHi = sayHi.bind(who)
 
 
 

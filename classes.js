@@ -70,7 +70,6 @@ class Manager extends Employee {
   }
 }
 
-
 ////////// PROBLEM 3 //////////
 
 /*
@@ -92,7 +91,36 @@ class Manager extends Employee {
   Call your new class ProgressiveManager
 */
 
-//Code Here
+class ProgressiveManager extends Manager {
+  constructor(first_name, last_name, email, age, reports, title, bonus) {
+    super(first_name, last_name, email, age, reports)
+    this.title = 'Not a manager'
+    this.bonus = 0
+  }
+  
+  hire(){
+    super.hire()
+    let reports = this.reports.length
+    // console.log(people)
+    if (reports === 0){
+      this.title = 'Not a Manager'
+    } else if (reports > 0 && reports <= 3){
+      this.title = 'Barely Manager'
+    } else if (reports > 3 && reports <= 10){
+      this.title = 'Mostly Manager'
+    } else if (reports > 10 && reports <= 50){
+      this.title = 'Manager'
+    } else if (reports > 50 && reports <= 100){
+      this.title = 'Manager Plus'
+    } else if (reports > 100){
+      this.title = 'Bestest Manager'
+    }
+  }
+  fire(){
+    super.fire()
+    this.bonus+= 100
+  }
+}
 
 
 

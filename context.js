@@ -18,15 +18,21 @@
   getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 */
   
-
-//Code Here
+let user = {
+  username: 'DuoH2o',
+  email: 'email@provider.com',
+  getUsername: function() {
+    return this.username
+  }
+}
 
 
 
 ////////// PROBLEM 2 //////////
 
 /*
- Below we have the class Animal.  The eat method is using the "this" keyword.  Use the "new" keyword to assign context to "this", and save the instance to a variable named animal1.  You can pass anything you want in for name, species and food.
+ Below we have the class Animal.  The eat method is using the "this" keyword.  Use the "new" keyword to assign context to "this", 
+ and save the instance to a variable named animal1.  You can pass anything you want in for name, species and food.
 */
 
 class Animal {
@@ -41,7 +47,7 @@ class Animal {
   }
 }
 
-//Code Here
+const animal1 = new Animal ('Shadow', 'Dog', 'Scooby-Snacks')
 
 
 
